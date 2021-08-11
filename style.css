@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 10 version
+*/
+
 :root{
     --border-radius: 20px;
     --pale-blue: hsl(225, 100%, 94%);
@@ -22,9 +29,13 @@ body{
     background-image: url("images/pattern-background-desktop.svg");
     background-repeat: no-repeat;
     min-height: 100vh;
+    display: -ms-grid;
     display: grid;
-    justify-content: center;
-    align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
 }
 
 #container{
@@ -78,15 +89,21 @@ body{
 #plan-card{
     background-color: var(--very-pale-blue);
     border-radius: 10px;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 3fr 1fr;
     grid-template-columns: 3fr 1fr;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 1.5em;
     margin-bottom: 1.5em;
 }
 
 #plan-description{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 3fr;
     grid-template-columns: 1fr 3fr;
 }
 
@@ -97,7 +114,8 @@ body{
 #plan-description h3{
     color: var(--desaturated-blue);
     font-weight: 500;
-    justify-self: start;
+    -ms-grid-column-align: start;
+        justify-self: start;
 }
 
 strong{
@@ -106,7 +124,9 @@ strong{
 }
 
 a#change{
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 
 a#change:hover{
